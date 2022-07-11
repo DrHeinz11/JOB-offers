@@ -8,5 +8,6 @@ const colors = {
     bground: "hsl(180,52%,96%)",
   },
 };
+
 const theme = extendTheme({ colors });
 export default theme;
