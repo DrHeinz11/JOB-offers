@@ -1,0 +1,10 @@
+export { default as faceit } from "./faceit.svg";
+export { default as insure } from "./insure.svg";
+export { default as loopStudio } from "./loop-studios.svg";
+export { default as manage } from "./manage.svg";
+export { default as myHome } from "./myhome.svg";
+export { default as shortly } from "./shortly.svg";
+export { default as eyeCam } from "./eyecam-co.svg";
+export { default as airFilter } from "./the-air-filter-company.svg";
+export { default as photoSnapshot } from "./photosnap.svg";
+export { default as account } from "./account.svg";

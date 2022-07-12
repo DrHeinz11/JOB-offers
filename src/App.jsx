@@ -1,13 +1,12 @@
 import { Heading, Image, Button } from "@chakra-ui/react";
 import Card from "./components/Card";
-import Filter from "./components/Filter";
-import data from "./constant/Images";
+import data from "./constant/dataExport";
 import { useState } from "react";
 function App() {
-  const [Default, setDefault] = useState("frontend");
+  const [argument, setArgument] = useState("frontend");
   const arrRetorno = [];
   data.map((e) => {
-    e.id_class.includes(Default) === true ? arrRetorno.push(e) : "";
+    e.id_class.includes(argument) === true ? arrRetorno.push(e) : "";
   });
 
   return (
@@ -17,21 +16,21 @@ function App() {
       <Button
         marginTop={"0.5rem"}
         _focus={{ backgroundColor: "primary.dkGray" }}
-        onClick={() => setDefault("html")}
+        onClick={() => setArgument("html")}
       >
         html
       </Button>
       <Button
         marginTop={"0.5rem"}
         _focus={{ backgroundColor: "primary.dkGray" }}
-        onClick={() => setDefault("node")}
+        onClick={() => setArgument("node")}
       >
         node
       </Button>
       <Button
         marginTop={"0.5rem"}
         _focus={{ backgroundColor: "primary.dkGray" }}
-        onClick={() => setDefault("javascript")}
+        onClick={() => setArgument("javascript")}
       >
         javascript
       </Button>
