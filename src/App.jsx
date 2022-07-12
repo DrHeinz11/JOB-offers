@@ -1,11 +1,13 @@
-import { Heading, Image, Button, Stack, Container } from "@chakra-ui/react";
+import { Button, Stack, Container } from "@chakra-ui/react";
 import Card from "./components/Card";
 import BgHeader from "./components/BgHeader";
 import { data, dataArr, dataTec } from "./constant/dataExport";
 import { useState } from "react";
 function App() {
   const [argument, setArgument] = useState(0);
+
   const arrRetorno = [];
+
   argument === 0
     ? data.map((e) => {
         arrRetorno.push(e);
@@ -69,6 +71,7 @@ function App() {
             ))}
           </Stack>
         </Stack>
+
         <Container maxW="100%" p="0">
           {}
           {arrRetorno.map((e, index) => (
