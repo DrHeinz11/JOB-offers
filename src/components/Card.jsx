@@ -3,11 +3,12 @@ import {
   Box,
   Image,
   Heading,
-  Breadcrumb,
-  BreadcrumbItem,
   Badge,
   Button,
   Text,
+  UnorderedList,
+  ListItem,
+  chakra,
 } from "@chakra-ui/react";
 
 const Card = ({ props }) => {
@@ -21,14 +22,28 @@ const Card = ({ props }) => {
       justify={{ base: "center", md: "flex-start" }}
       gap="10px"
       p="15px"
-      border="1px solid black"
+      border="1px solid rgba(0,0,0,0.3)"
+      borderLeft="5px solid rgb(49,151,149)"
+      borderRadius="md"
+      _hover={{
+        borderColor: "rgba(0,0,0,0.1)",
+        borderLeft: "5px solid rgba(49,151,149,.5)",
+        boxShadow:
+          "0 10px 15px -3px rgba(49, 151, 149, 0.1),0 4px 6px -2px rgba(49, 151, 149, 0.5)",
+        rounded: "md",
+        bg: "white",
+      }}
     >
       <Box>
         <Image src={props.logo} w="88px" h="88px" maxWidth="none" />
       </Box>
 
       <Stack>
-        <Stack direction="row" justify={{base:'center',md:'flex-start'}} align="center">
+        <Stack
+          direction="row"
+          justify={{ base: "center", md: "flex-start" }}
+          align="center"
+        >
           <Text fontSize="lg">{props.business}</Text>
           {props.time.map((e) => (
             <Badge marginLeft="10px" colorScheme={"green"}>
@@ -36,16 +51,24 @@ const Card = ({ props }) => {
             </Badge>
           ))}
         </Stack>
-        <Heading w={{ lg: "275px" }} textAlign={{base:'center',md:'start'}} fontSize="xl">
+        <Heading
+          w={{ lg: "275px" }}
+          textAlign={{ base: "center", md: "start" }}
+          fontSize="xl"
+        >
           {props.position}
         </Heading>
-        <Breadcrumb separator="-">
-          {props.features.map((e) => {
-            <BreadcrumbItem>
-              <Text textTransform="capitalize">{e}</Text>
-            </BreadcrumbItem>;
-          })}
-        </Breadcrumb>
+        <Stack direction="row">
+          {props.features.map((e) => (
+            <chakra.p
+              fontSize="16px"
+              textTransform="capitalize"
+              fontWeight="medium"
+            >
+              -{e}
+            </chakra.p>
+          ))}
+        </Stack>
       </Stack>
 
       <Stack
