@@ -18,7 +18,11 @@ function App() {
     <Container bg="primary.lgGray" maxW="100%">
       <Stack maxWidth="1200px" m={"0 auto"}>
         <Stack direction="column">
-          <Stack direction="row" justify={{ base: "center", md: "flex-start" }}>
+          <Stack
+            direction="row"
+            align="center"
+            justify={{ base: "center", md: "flex-start" }}
+          >
             <Button
               size="lg"
               textTransform="capitalize"
@@ -29,7 +33,7 @@ function App() {
             </Button>
             {dataArr.map((e, index) => (
               <Button
-                size="lg"
+                size="md"
                 textTransform="capitalize"
                 variant={"outline"}
                 colorScheme="teal"
@@ -43,14 +47,14 @@ function App() {
 
           <Stack
             direction="row"
-            flexWrap="wrap"
-            gap="10px"
+            flexWrap={{ base: "nowrap", lg: "wrap" }}
+            gap={{ base: "0px", lg: "10px" }}
             justify={{ base: "center", md: "flex-start" }}
           >
             {dataTec.map((e, index) => (
               <Button
                 textTransform="capitalize"
-                size="md"
+                size="sm"
                 colorScheme="teal"
                 onClick={() => setArgument(e.toLowerCase())}
                 key={index}

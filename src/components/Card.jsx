@@ -12,11 +12,11 @@ import {
 const Card = ({ props }) => {
   return (
     <Stack
-      margin={{ base: "25px 10px", lg: "50px" }}
+      margin={{ base: "25px 0", lg: "50px 0" }}
       direction="row"
       flexWrap={"wrap"}
       align="center"
-      maxW="100%"
+      W="100%"
       justify={{ base: "center", md: "flex-start" }}
       gap="10px"
       p="15px"
@@ -76,16 +76,15 @@ const Card = ({ props }) => {
         flexWrap={"wrap"}
         gap={"10px"}
         align="center"
-        justify={"center"}
+        justify={'space-evenly'}
       >
         {props.id_class.map((e) => (
           <Badge
-          variant='subtle'
-            fontSize="1rem"
+            variant="subtle"
+            fontSize={{ md: ".75rem", lg: "1rem" }}
             textTransform="capitalize"
-            p={"5px 10px"}
+            p={{ base: "3px 6px", lg: "5px 10px" }}
             colorScheme="teal"
-            size="lg"
           >
             {e}
           </Badge>
