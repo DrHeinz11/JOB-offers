@@ -3,11 +3,16 @@ import Card from "./components/Card";
 import { data, dataArr, dataTec } from "./constant/dataExport";
 import { useState } from "react";
 function App() {
-  const [argument, setArgument] = useState("frontend");
+  const [argument, setArgument] = useState(0);
   const arrRetorno = [];
-  data.map((e) => {
-    e.id_class.includes(argument) === true ? arrRetorno.push(e) : "";
-  });
+  console.log(arrRetorno,data)
+  argument === 0
+    ? data.map((e) => {
+        arrRetorno.push(e);
+      })
+    : data.map((e) => {
+        e.id_class.includes(argument) === true ? arrRetorno.push(e) : "";
+      });
 
   return (
     <Container bg="primary.lgGray" maxW="100%">

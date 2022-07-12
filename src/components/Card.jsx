@@ -6,8 +6,6 @@ import {
   Badge,
   Button,
   Text,
-  UnorderedList,
-  ListItem,
   chakra,
 } from "@chakra-ui/react";
 
