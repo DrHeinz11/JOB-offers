@@ -5,7 +5,7 @@ import { useState } from "react";
 function App() {
   const [argument, setArgument] = useState(0);
   const arrRetorno = [];
-  console.log(arrRetorno,data)
+  console.log(arrRetorno, data);
   argument === 0
     ? data.map((e) => {
         arrRetorno.push(e);
@@ -19,10 +19,19 @@ function App() {
       <Stack maxWidth="1200px" m={"0 auto"}>
         <Stack direction="column">
           <Stack direction="row" justify={{ base: "center", md: "flex-start" }}>
+            <Button
+              size="lg"
+              textTransform="capitalize"
+              colorScheme="teal"
+              onClick={() => setArgument(0)}
+            >
+              All
+            </Button>
             {dataArr.map((e, index) => (
               <Button
                 size="lg"
                 textTransform="capitalize"
+                variant={"outline"}
                 colorScheme="teal"
                 onClick={() => setArgument(e)}
                 key={index}

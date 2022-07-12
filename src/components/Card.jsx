@@ -20,7 +20,7 @@ const Card = ({ props }) => {
       justify={{ base: "center", md: "flex-start" }}
       gap="10px"
       p="15px"
-      bg={'white'}
+      bg={"white"}
       border="1px solid rgba(0,0,0,0.3)"
       borderLeft="5px solid rgb(49,151,149)"
       borderRadius="md"
@@ -79,9 +79,16 @@ const Card = ({ props }) => {
         justify={"center"}
       >
         {props.id_class.map((e) => (
-          <Button textTransform="capitalize" colorScheme="teal" size="sm">
+          <Badge
+          variant='subtle'
+            fontSize="1rem"
+            textTransform="capitalize"
+            p={"5px 10px"}
+            colorScheme="teal"
+            size="lg"
+          >
             {e}
-          </Button>
+          </Badge>
         ))}
       </Stack>
     </Stack>
