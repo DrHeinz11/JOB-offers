@@ -40,7 +40,7 @@ const data = [
   {
     position: "Junior Frontend Developer",
     business: "Manage.ent",
-    time: "",
+    time: [""],
     logo: manage,
     id_class: ["frontend", "junior", "tailwind", "angular",'HTML'],
     features: ["1w ago", "full time", "UK only"],
@@ -56,7 +56,7 @@ const data = [
   {
     position: "Test QA Jr",
     business: "EyeCam",
-    time: "",
+    time: [""],
     logo: eyeCam,
     id_class: ["node", "python", "javascript", "cypress", "jest", "junior"],
     features: ["2w ago", "Full Time", "Woldwide"],
@@ -64,7 +64,7 @@ const data = [
   {
     position: "Project Manager",
     business: "Shortly.inc",
-    time: "",
+    time: [""],
     logo: shortly,
     id_class: ["senior", "python", "javascript", "cypress", "jest"],
     features: ["6w ago", "Full Time", "Woldwide"],
@@ -72,7 +72,7 @@ const data = [
   {
     position: "Backend Developer JR",
     business: "AirFilter",
-    time: "",
+    time: [""],
     logo: airFilter,
     id_class: ["node", "python", "express", "PHP"],
     features: ["4d ago", "Full Time", "ARG only"],
@@ -80,7 +80,7 @@ const data = [
   {
     position: "Software Engineer JR",
     business: "PhotoSnapshot",
-    time: "",
+      time: [""],
     logo: photoSnapshot,
     id_class: ["node", "express", "PHP", "javascript", "junior"],
     features: ["9w ago", "Full Time", "IRL only"],
@@ -88,7 +88,7 @@ const data = [
   {
     position: "Software Architect SR",
     business: "Account",
-    time: "",
+    time: [""],
     logo: account,
     id_class: [
       "javascript",

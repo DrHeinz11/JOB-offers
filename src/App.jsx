@@ -12,7 +12,6 @@ function App() {
   return (
     <>
       <Heading color="primary.bground">Hola esto es una prueba </Heading>
-      <Card></Card>
       <Button
         marginTop={"0.5rem"}
         _focus={{ backgroundColor: "primary.dkGray" }}
@@ -39,14 +38,12 @@ function App() {
         _focus={{ backgroundColor: "primary.dkGray" }}
         onClick={() => setArgument("python")}
       >
-       python
+        python
       </Button>
       <div className="contianer">
         {}
         {arrRetorno.map((e, index) => (
-          <>
-            <Image src={e.logo} key={index} />
-          </>
+          <Card props={e} key={index} />
         ))}
       </div>
     </>
