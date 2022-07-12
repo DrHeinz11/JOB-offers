@@ -4,7 +4,7 @@ import {
   Image,
   Heading,
   Badge,
-  Button,
+  Divider,
   Text,
   chakra,
 } from "@chakra-ui/react";
@@ -12,7 +12,7 @@ import {
 const Card = ({ props }) => {
   return (
     <Stack
-      margin={{ base: "25px 0", lg: "50px 0" }}
+      margin={{ base: "20px 0", lg: "30px 0" }}
       direction="row"
       flexWrap={"wrap"}
       align="center"
@@ -69,14 +69,14 @@ const Card = ({ props }) => {
           ))}
         </Stack>
       </Stack>
-
+      <Divider orientation="horizontal" />
       <Stack
         spacing="4"
         direction="row"
         flexWrap={"wrap"}
         gap={"10px"}
         align="center"
-        justify={'space-evenly'}
+        justify={"space-evenly"}
       >
         {props.id_class.map((e) => (
           <Badge

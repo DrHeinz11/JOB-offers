@@ -101,6 +101,6 @@ const data = [
     features: ["19w ago", "Full Time", "USA only"],
   },
 ];
-const dataArr = ["junior", "senior", "midweight"];
+const dataArr = ["junior", "midweight", "senior"];
 const dataTec = ["python", "javascript", "node", "react", "css"];
 export { data, dataArr, dataTec };

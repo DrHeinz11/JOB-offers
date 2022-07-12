@@ -8,5 +8,5 @@ export { default as eyeCam } from "./eyecam-co.svg";
 export { default as airFilter } from "./the-air-filter-company.svg";
 export { default as photoSnapshot } from "./photosnap.svg";
 export { default as account } from "./account.svg";
-export { default as bgHeaderDeks } from "./bg-header-desktop.svg";
-export { default as bgHeaderMob } from "./bg-header-mobile.svg";
+export { default as bgDesktop } from "../bg-header-desktop.svg";
+export { default as bgMobile } from "../bg-header-mobile.svg";
