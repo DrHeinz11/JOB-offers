@@ -16,7 +16,7 @@ function App() {
       <Button
         marginTop={"0.5rem"}
         _focus={{ backgroundColor: "primary.dkGray" }}
-        onClick={() => setArgument("html")}
+        onClick={() => setArgument("HTML")}
       >
         html
       </Button>
@@ -33,6 +33,13 @@ function App() {
         onClick={() => setArgument("javascript")}
       >
         javascript
+      </Button>
+      <Button
+        marginTop={"0.5rem"}
+        _focus={{ backgroundColor: "primary.dkGray" }}
+        onClick={() => setArgument("python")}
+      >
+       python
       </Button>
       <div className="contianer">
         {}

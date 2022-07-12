@@ -1,11 +1,39 @@
-import { Stack, Box } from "@chakra-ui/react";
+import {
+  Stack,
+  Box,
+  Image,
+  Heading,
+  Breadcrumb,
+  BreadcrumbItem,
+  Badge,
+} from "@chakra-ui/react";
 
-const Card = () => {
+const Card = ({
+  props: { logo, features, title, position, time, business },
+}) => {
   return (
     <Stack>
-      <Box>image</Box>
+      <Box>
+        <Image src={logo} />
+      </Box>
+      <Stack>
+        <Box>
+          {time.map((e) => (
+            <Badge colorScheme={"green"}>{e}</Badge>
+          ))}
+        </Box>
+        <Heading>{title}</Heading>
+        <Breadcrumb separator="-">
+          {features.map((e) => {
+            <BreadcrumbItem>
+              <Text textTransform="capitalize">{e}</Text>
+            </BreadcrumbItem>;
+          })}
+        </Breadcrumb>
+      </Stack>
+
       <Box>Copy</Box>
-      <Box>tags</Box>
+      <Box></Box>
     </Stack>
   );
 };
