@@ -12,7 +12,17 @@ import {
 
 const Card = ({ props }) => {
   return (
-    <Stack margin={"50px auto"} direction="row" align="center" w="75%" gap="10px">
+    <Stack
+      margin={{base:'25px 10px',lg:"50px"}}
+      direction="row"
+      flexWrap={"wrap"}
+      align="center"
+      maxW="100%"
+      justify={{ base: "center", md:'flex-start' }}
+      gap="10px"
+      p="15px"
+      border="1px solid black"
+    >
       <Box>
         <Image src={props.logo} w="88px" h="88px" maxWidth="none" />
       </Box>
@@ -38,7 +48,14 @@ const Card = ({ props }) => {
         </Breadcrumb>
       </Stack>
 
-      <Stack spacing="4" direction="row" w="425px" align="center" justify={'space-between'}>
+      <Stack
+        spacing="4"
+        direction="row"
+        flexWrap={"wrap"}
+        gap={"10px"}
+        align="center"
+        justify={"center"}
+      >
         {props.id_class.map((e) => (
           <Button textTransform="capitalize" colorScheme="teal" size="sm">
             {e}
