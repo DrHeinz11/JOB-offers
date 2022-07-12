@@ -1,6 +1,6 @@
-import { Heading, Image, Button } from "@chakra-ui/react";
+import { Heading, Image, Button, Stack } from "@chakra-ui/react";
 import Card from "./components/Card";
-import data from "./constant/dataExport";
+import { data, dataArr, dataTec } from "./constant/dataExport";
 import { useState } from "react";
 function App() {
   const [argument, setArgument] = useState("frontend");
@@ -10,43 +10,43 @@ function App() {
   });
 
   return (
-    <>
-      <Heading color="primary.bground">Hola esto es una prueba </Heading>
-      <Button
-        marginTop={"0.5rem"}
-        _focus={{ backgroundColor: "primary.dkGray" }}
-        onClick={() => setArgument("HTML")}
-      >
-        html
-      </Button>
-      <Button
-        marginTop={"0.5rem"}
-        _focus={{ backgroundColor: "primary.dkGray" }}
-        onClick={() => setArgument("node")}
-      >
-        node
-      </Button>
-      <Button
-        marginTop={"0.5rem"}
-        _focus={{ backgroundColor: "primary.dkGray" }}
-        onClick={() => setArgument("javascript")}
-      >
-        javascript
-      </Button>
-      <Button
-        marginTop={"0.5rem"}
-        _focus={{ backgroundColor: "primary.dkGray" }}
-        onClick={() => setArgument("python")}
-      >
-        python
-      </Button>
+    <Stack bg="primary.lgGray">
+      <Stack direction="column">
+        <Stack direction="row">
+          {dataArr.map((e, index) => (
+            <Button
+              size="lg"
+              textTransform="capitalize"
+              colorScheme="teal"
+              onClick={() => setArgument(e)}
+              key={index}
+            >
+              {e}
+            </Button>
+          ))}
+        </Stack>
+
+        <Stack direction="row">
+          {dataTec.map((e, index) => (
+            <Button
+              textTransform="capitalize"
+              size="md"
+              colorScheme="teal"
+              onClick={() => setArgument(e.toLowerCase())}
+              key={index}
+            >
+              {e}
+            </Button>
+          ))}
+        </Stack>
+      </Stack>
       <div className="contianer">
         {}
         {arrRetorno.map((e, index) => (
           <Card props={e} key={index} />
         ))}
       </div>
-    </>
+    </Stack>
   );
 }
 

@@ -22,6 +22,7 @@ const Card = ({ props }) => {
       justify={{ base: "center", md: "flex-start" }}
       gap="10px"
       p="15px"
+      bg={'white'}
       border="1px solid rgba(0,0,0,0.3)"
       borderLeft="5px solid rgb(49,151,149)"
       borderRadius="md"

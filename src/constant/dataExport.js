@@ -42,7 +42,7 @@ const data = [
     business: "Manage.ent",
     time: [""],
     logo: manage,
-    id_class: ["frontend", "junior", "tailwind", "angular",'HTML'],
+    id_class: ["frontend", "junior", "tailwind", "angular", "HTML"],
     features: ["1w ago", "full time", "UK only"],
   },
   {
@@ -50,7 +50,7 @@ const data = [
     business: "myHome.inc",
     time: ["new"],
     logo: myHome,
-    id_class: ["ruby", "fullstack", "python", "javascript",'HTML'],
+    id_class: ["ruby", "fullstack", "python", "javascript", "HTML"],
     features: ["2w ago", "Full Time", "Woldwide"],
   },
   {
@@ -80,7 +80,7 @@ const data = [
   {
     position: "Software Engineer JR",
     business: "PhotoSnapshot",
-      time: [""],
+    time: [""],
     logo: photoSnapshot,
     id_class: ["node", "express", "PHP", "javascript", "junior"],
     features: ["9w ago", "Full Time", "IRL only"],
@@ -101,5 +101,6 @@ const data = [
     features: ["19w ago", "Full Time", "USA only"],
   },
 ];
-
-export default data;
+const dataArr = ["junior", "senior", "midweight"];
+const dataTec = ["python", "javascript", "node", "react", "css"];
+export { data, dataArr, dataTec };
