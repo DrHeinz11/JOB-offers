@@ -13,12 +13,12 @@ import {
 const Card = ({ props }) => {
   return (
     <Stack
-      margin={{base:'25px 10px',lg:"50px"}}
+      margin={{ base: "25px 10px", lg: "50px" }}
       direction="row"
       flexWrap={"wrap"}
       align="center"
       maxW="100%"
-      justify={{ base: "center", md:'flex-start' }}
+      justify={{ base: "center", md: "flex-start" }}
       gap="10px"
       p="15px"
       border="1px solid black"
@@ -28,7 +28,7 @@ const Card = ({ props }) => {
       </Box>
 
       <Stack>
-        <Stack direction="row" align="center">
+        <Stack direction="row" justify={{base:'center',md:'flex-start'}} align="center">
           <Text fontSize="lg">{props.business}</Text>
           {props.time.map((e) => (
             <Badge marginLeft="10px" colorScheme={"green"}>
@@ -36,7 +36,7 @@ const Card = ({ props }) => {
             </Badge>
           ))}
         </Stack>
-        <Heading w="275px" fontSize="xl">
+        <Heading w={{ lg: "275px" }} textAlign={{base:'center',md:'start'}} fontSize="xl">
           {props.position}
         </Heading>
         <Breadcrumb separator="-">
